@@ -126,13 +126,6 @@
       const audioInvertido = new Audio('./assets/musics/inverted-world.mpeg');
 
       document.body.addEventListener("mousemove", function () {
-        audioNormal.play()
-      });
-
-      function switchTheme() {
-        document.body.classList.toggle("dark-theme");
-        document.body.classList.toggle("light-theme");
-
         const isDark = document.getElementById('body').classList.contains('dark-theme');
         
         if (isDark) {
@@ -142,6 +135,11 @@
             audioInvertido.pause();
             audioNormal.play();
         }
+      });
+
+      function switchTheme() {
+        document.body.classList.toggle("dark-theme");
+        document.body.classList.toggle("light-theme");
       }
     </script>
   </body>
